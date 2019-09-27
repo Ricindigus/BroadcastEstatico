@@ -3,6 +3,8 @@ package com.example.broadcastestatico;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.CountDownTimer;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.work.Worker;
@@ -21,6 +23,7 @@ public class CallWorker extends Worker {
         String number = getInputData().getString("number");
         i1.setData(Uri.parse("tel:"+number));
         getApplicationContext().startActivity(i1);
+        Toast.makeText(getApplicationContext(), "hola", Toast.LENGTH_SHORT).show();
         return Result.success();
     }
 }

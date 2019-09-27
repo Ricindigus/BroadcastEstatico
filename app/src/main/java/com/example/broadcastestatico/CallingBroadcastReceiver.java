@@ -48,19 +48,7 @@ public class CallingBroadcastReceiver extends BroadcastReceiver {
             }
 
             if (phoneNumber.equals(PHONE_RECEIVE_CALL_1)) tm.acceptRingingCall();
+            else tm.endCall();
         }
-    }
-
-
-
-
-    interface ITelephony {
-
-        boolean endCall();
-
-        void answerRingingCall();
-
-        void silenceRinger();
-
     }
 }
